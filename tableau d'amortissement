@@ -1,7 +1,7 @@
 s = int(input("Entrer le montant du pret ou du credit : "))
 t = float(input("Entrer le taux annuel : "))
 n = int(input("Entrer le nombre d'annee : "))
-tm = t/12/100
+tm = (1+t/100)**(1/12)-1
 a = (1+tm)**(12*n)
 m = s*tm*a/(a-1)
 
